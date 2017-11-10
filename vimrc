@@ -138,7 +138,7 @@ endif
 :hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 :nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
 
-" BLASFEMBLASFEMEA, Ativa o mouse \m 
+" Toggle mouse \m 
 nnoremap <Leader>m :set mouse=a<CR>
 
 "Usar emmet Ctrl+e+,
