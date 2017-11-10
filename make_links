@@ -1,0 +1,20 @@
+#!/bin/sh
+#
+# NOT TESTED YET, be warned.
+#
+echo "Making sym links..."
+echo "Trying .Xmodmap ..."
+ln -s Xmodmap /home/$USER/.Xmodmap
+echo "Trying .Xresources ..."
+ln -s Xresources /home/$USER/.Xresources
+echo "Trying .extend.Xresources ..."
+ln -s extend.Xresources /home/$USER/.extend.Xresources
+echo "Trying .vimrc ..."
+ln -s vimrc /home/$USER/.vimrc
+echo "Trying .i3/config ..."
+ln -s config-i3 /home/$USER/.i3/config
+echo "Trying .config/ranger/rc.conf ..."
+ln -s rc-ranger.conf /home/$USER/.config/ranger/rc.conf
+echo "Trying .config/ranger/rifle.conf ..."
+ln -s rifle-ranger.conf /home/$USER/.config/ranger/rifle.conf 
+echo "I think it is all good..."
