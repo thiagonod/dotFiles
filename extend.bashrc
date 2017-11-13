@@ -39,9 +39,9 @@ if ${use_color} ; then
 	fi
 
 	if [[ ${EUID} == 0 ]] ; then
-		PS1='\[\033[01;31m\][\h\[\033[01;36m\] \W\[\033[01;31m\]]\$\[\033[00m\] '
+		PS1='\[\033[01;33m\][\[\033[01;31m\]\$\[\033[01;33m\]]\h\[\033[01;37m\] \W\[\033[01;33m\] ]›\[\033[00m\]'
 	else
-		PS1='\[\033[01;32m\][\u@\h\[\033[01;37m\] \W\[\033[01;32m\]]\$\[\033[00m\] '
+		PS1='\[\033[01;32m\][\[\033[01;37m\]\$\[\033[01;32m\]]\h\[\033[01;36m\] \W\[\033[02;32m\] ]›\[\033[00m\]'
 	fi
 
 	alias ls='ls --color=auto'
@@ -112,7 +112,7 @@ ex ()
 export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1;41;5:votes=1;44:dsc=0:other=1;35"
 
 # fix "xdg-open fork-bomb" export your preferred browser from here
-export BROWSER=/usr/bin/palemoon
+export BROWSER=/usr/bin/firefox
 
 alias con='vim $HOME/.i3/config'
 alias comp='vim $HOME/.config/compton.conf'

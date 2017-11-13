@@ -1,42 +1,42 @@
-*background:                      #272827
-*foreground:                      #657b83
+*background:                      #000000
+*foreground:                      #ABCDEF
 *fading:                          15
 *fadeColor:                       black
 *cursorColor:                     white
-*pointerColorBackground:          #2B2C2B
+*pointerColorBackground:          #636363
 *pointerColorForeground:          #16A085
 
 !! black dark/light
-*color0:                          #232423
-*color8:                          #282928
+!*color0:                          #232423
+!*color8:                          #282928
 
 !! red dark/light
 *color1:                          #BA2922
 *color9:                          #CC372C
 
 !! green dark/light
-*color2:                          #7E807E
-*color10:                         #8D8F8D
+!*color2:                          #7E807E
+!*color10:                         #8D8F8D
 
 !! yellow dark/light
-*color3:                          #4C4F4D
-*color11:                         #4E524F
+!*color3:                          #4C4F4D
+!*color11:                         #4E524F
 
 !! blue dark/light
-*color4:                          #16A085
-*color12:                         #13BF9D
+!*color4:                          #16A085
+!*color12:                         #13BF9D
 
 !! magenta dark/light
-*color5:                          #43746A
-*color13:                         #487D72
+!*color5:                          #43746A
+!*color13:                         #487D72
 
 !! cyan dark/light
-*color6:                          #00CCCC
-*color14:                         #00D1D1
+!*color6:                          #00CCCC
+!*color14:                         #00D1D1
 
 !! white dark/light
-*color7:                          #E0E0E0
-*color15:                         #E8E8E8
+!*color7:                          #E0E0E0
+!*color15:                         #E8E8E8
 
 Xcursor.theme: Maia-Cursor
 Xcursor.size:                     0
@@ -55,11 +55,11 @@ URxvt.bold.font: xft:Ubuntu Mono derivative Powerline Bold:size=12
 !! terminus names see end of file!
 
 URxvt.depth:32
-! URxvt.background:                 black
+!URxvt.background:                 black
 URxvt*scrollBar:                  false
 URxvt*mouseWheelScrollPage:       false
 URxvt*cursorBlink:                true
-! URxvt*background:                 black
+!URxvt*background:                 black
 ! URxvt*foreground:                 grey
 URxvt*saveLines:                  5000
 
@@ -110,7 +110,7 @@ URxvt.keysym.S-C-v:                perl:clipboard:paste
 ! INDEX
 ! color0  -> Cor do texto dentro do prompt
 ! color1  -> não sei
-! color2  -> não sei
+! color2  -> promt bash
 ! color3  -> cor do estado do git
 ! color4  -> cor do prompt
 ! color5  -> não sei
@@ -125,7 +125,7 @@ URxvt.keysym.S-C-v:                perl:clipboard:paste
 ! TEMA_CINZA
 ! URxvt*color0:#000000
 ! URxvt*color1:
-! URxvt*color2:
+! URxvt*color2:#123456
 ! URxvt*color3:#2B2C2B
 ! URxvt*color4:#454948
 ! URxvt*color5:
@@ -133,9 +133,9 @@ URxvt.keysym.S-C-v:                perl:clipboard:paste
 ! URxvt*color7:#1A6B9E
 ! URxvt*color8:#2D2D2D
 ! URxvt*color9:
-! URxvt*color10:#70C300
-! URxvt*color11:#EBB107
-! URxvt*color12:#0F28A8
+URxvt*color10:#70C300
+URxvt*color11:#EBB107
+URxvt*color12:#1A6B9E
 ! URxvt*color13:
 ! URxvt*color14:
 ! URxvt*color15:
