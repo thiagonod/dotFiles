@@ -115,10 +115,10 @@ URxvt.keysym.S-C-v:                perl:clipboard:paste
 ! color4  -> cor do prompt
 ! color5  -> não sei
 ! color6  -> cor do texto?
-! color7  -> cor do virtual env, bolinhas que o pacman come, bolinhas que o pacman come
+! color7  -> cor do virtual env, bolinhas que o pacman come
 ! color8  -> cor da seleção (TAB)
 ! color9  -> não sei
-! color10 -> cor de scripts executáveis
+! color10 -> cor de scripts executáveis e prompt bash
 ! color11 -> cor de caracteres especias e pacman(-Syu)
 ! color12 -> cor das pastas(ls)
 ! 
@@ -127,7 +127,7 @@ URxvt*color0:#000000
 ! URxvt*color1:
 ! URxvt*color2:
 ! URxvt*color3:#2B2C2B
-! URxvt*color4:#454948
+URxvt*color4:#454948
 ! URxvt*color5:
 ! URxvt*color6:#7AADDC
 ! URxvt*color7:#1A6B9E
