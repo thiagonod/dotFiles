@@ -123,18 +123,18 @@ URxvt.keysym.S-C-v:                perl:clipboard:paste
 ! color12 -> cor das pastas(ls)
 ! 
 ! TEMA_CINZA
-URxvt*color0:#000000
+! URxvt*color0:#000000
 ! URxvt*color1:
 ! URxvt*color2:
 ! URxvt*color3:#2B2C2B
-URxvt*color4:#454948
+! URxvt*color4:#454948
 ! URxvt*color5:
 ! URxvt*color6:#7AADDC
 ! URxvt*color7:#1A6B9E
 ! URxvt*color8:#2D2D2D
 ! URxvt*color9:
-URxvt*color10:#70C300
-URxvt*color11:#EBB107
+! URxvt*color10:#70C300
+! URxvt*color11:#EBB107
 ! URxvt*color12:#0F28A8
 ! URxvt*color13:
 ! URxvt*color14:
