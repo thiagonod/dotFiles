@@ -33,8 +33,9 @@ colors() {
 [[ -f ~/.extend.bashrc ]] && . ~/.extend.bashrc
 
 [ -r /usr/share/bash-completion/bash_completion   ] && . /usr/share/bash-completion/bash_completion
+
 # Set config variables first
-GIT_PROMPT_ONLY_IN_REPO=1
+#GIT_PROMPT_ONLY_IN_REPO=1
 # GIT_PROMPT_FETCH_REMOTE_STATUS=0   # uncomment to avoid fetching remote status
 # GIT_PROMPT_SHOW_UPSTREAM=1 # uncomment to show upstream tracking branch
 # GIT_PROMPT_SHOW_UNTRACKED_FILES=all # can be no, normal or all; determines counting of untracked files
@@ -46,5 +47,5 @@ GIT_PROMPT_ONLY_IN_REPO=1
 # GIT_PROMPT_THEME=Custom # use custom theme specified in file GIT_PROMPT_THEME_FILE (default ~/.git-prompt-colors.sh)
 # GIT_PROMPT_THEME_FILE=~/.git-prompt-colors.sh
 # GIT_PROMPT_THEME=Solarized # use theme optimized for solarized color scheme
-GIT_PROMPT_THEME=Minimal_UserHost
-source ~/.bash-git-prompt/gitprompt.sh
+#GIT_PROMPT_THEME=Minimal_UserHost
+#source ~/.bash-git-prompt/gitprompt.sh
