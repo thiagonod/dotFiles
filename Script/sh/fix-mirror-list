@@ -1,0 +1,6 @@
+#!/bin/bash
+echo "Atualizando source list..."
+sudo pacman-mirrors -f 0
+echo "Sincronizando repositórios..."
+sudo pacman -Syy
+echo "Pronto! Espero que esteja tudo certo."
