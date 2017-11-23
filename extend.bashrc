@@ -1,7 +1,8 @@
 #
 # ~/.extend.bashrc
 #
-source ~/.git-prompt/prompt
+# Load git_prompt
+source ~/.dotFiles/git-prompt
 # Change the window title of X terminals
 case ${TERM} in
 	xterm*|rxvt*|Eterm*|aterm|kterm|gnome*|interix|konsole*)
@@ -114,6 +115,7 @@ export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1
 # fix "xdg-open fork-bomb" export your preferred browser from here
 export BROWSER=/usr/bin/firefox
 
+alias ..='cd ..'
 alias con='vim $HOME/.i3/config'
 alias comp='vim $HOME/.config/compton.conf'
 alias fixit='sudo rm -f /var/lib/pacman/db.lck'
