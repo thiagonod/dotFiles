@@ -133,9 +133,9 @@ URxvt.keysym.S-C-v:                perl:clipboard:paste
 ! URxvt*color7:#1A6B9E
 ! URxvt*color8:#2D2D2D
 ! URxvt*color9:
-URxvt*color10:#70C300
+! URxvt*color10:#70C300
 URxvt*color11:#EBB107
-URxvt*color12:#1A6B9E
+! URxvt*color12:#1A6B9E
 ! URxvt*color13:
 ! URxvt*color14:
 ! URxvt*color15:
