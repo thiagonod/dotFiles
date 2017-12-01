@@ -1,8 +1,10 @@
 ##############################################################
 #
 C_RED="\033[01;31m"
+c_red="\033[00;31m"
 C_YELLOW="\033[01;33m"
 C_GREEN="\033[01;32m"
+c_green="\033[00:32m"
 C_OCHRE="\033[38;5;95m"
 C_BLUE="\033[01;34m"
 C_WHITE="\033[01;37m"
@@ -28,9 +30,9 @@ branch_name_color ()
     #if git diff --quiet 2>/dev/null >&2 
     if git status | grep "nothing to commit" >/dev/null 2>&1 
     then
-      color=$C_OCHRE
+      color=$c_green
     else
-      color=$C_RED
+      color=$c_red
     fi
   else
     return 0
@@ -59,7 +61,7 @@ git_prompt ()
 {
   if git rev-parse --git-dir >/dev/null 2>&1
   then  
-    prompt="$C_RESET$C_OCHRE$(git_branch_name)$(branch_status) "
+    prompt="$C_RESET$(branch_name_color)$(git_branch_name) $(branch_status) "
   else
     prompt=""
   fi
