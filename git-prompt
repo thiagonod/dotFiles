@@ -61,7 +61,7 @@ git_prompt ()
 {
   if git rev-parse --git-dir >/dev/null 2>&1
   then  
-    prompt="$C_RESET$(branch_name_color)$(git_branch_name) $(branch_status) "
+    prompt="$C_RESET$(branch_name_color)$(git_branch_name)$(branch_status) "
   else
     prompt=""
   fi
