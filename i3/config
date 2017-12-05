@@ -322,7 +322,7 @@ exec --no-startup-id xautolock -time 10 -locker blurlock
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec_always --no-startup-id numlockx on
-#exec_always --no-startup-id wal -c -n -i ~/.config/wall.png
+exec_always --no-startup-id wal -c -n -i ~/.config/wall.png
 
 # Color palette used for the terminal ( ~/.extend.Xresources file )
 # Colors are gathered based on the documentation:

@@ -115,6 +115,7 @@ export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1
 # fix "xdg-open fork-bomb" export your preferred browser from here
 export BROWSER=/usr/bin/firefox
 
+alias mkin='mkin () { if [ -d $1 ] || [ -z $1 ]; then echo "O diretório $1 já existe, ou parâmetro inválido."; else mkdir $1; cd $1; fi } ; mkin'
 alias ..='cd ..'
 alias con='vim $HOME/.i3/config'
 alias comp='vim $HOME/.config/compton.conf'
