@@ -1,8 +1,8 @@
 *background:                      #000000
 *foreground:                      #FAFAFA
 *fading:                          50
-*fadeColor:                       #3D3B3F
-*cursorColor:                     white
+*fadeColor:                       #070707
+*cursorColor:                     #FFFFFF
 *pointerColorBackground:          #636363
 *pointerColorForeground:          #16A085
 
@@ -55,12 +55,11 @@ URxvt.bold.font: xft:Ubuntu Mono derivative Powerline Bold:size=12
 !! terminus names see end of file!
 
 URxvt.depth:32
-!URxvt.background:                 #000000
 URxvt*scrollBar:                  false
 URxvt*mouseWheelScrollPage:       false
 URxvt*cursorBlink:                true
-!URxvt*background:                 #000000
-!URxvt*foreground:                 #D2D2D2
+URxvt*background:                 #000000
+URxvt*foreground:                 #FAFAFA
 URxvt*saveLines:                  5000
 
 ! for 'fake' transparency (without Compton) uncomment the following three lines
@@ -74,7 +73,7 @@ URxvt.keysym.S-C-c:                perl:clipboard:copy
 URxvt.keysym.S-C-v:                perl:clipboard:paste
 ! URxvt.keysym.M-C-v:              perl:clipboard:paste_escaped
 ! URxvt*termName:                  string
-! URxvt*geometry:                  geometry
+URxvt*geometry:97x24
 ! URxvt*chdir:                     string
 ! URxvt*reverseVideo:              boolean
 ! URxvt*loginShell:                boolean
@@ -108,121 +107,55 @@ URxvt.keysym.S-C-v:                perl:clipboard:paste
 ! --------------CORES DO TERMINAL----------------
 ! -----------------------------------------------
 ! INDEX
-! color0  -> Cor do texto dentro do prompt
-! color1  -> não sei
-! color2  -> promt bash
-! color3  -> cor do estado do git
-! color4  -> cor do prompt
-! color5  -> não sei
-! color6  -> cor do texto?
-! color7  -> cor do virtual env, bolinhas que o pacman come
-! color8  -> cor da seleção (TAB)
-! color9  -> não sei
+! color0  -> Cor do texto de dentro do menu htop e dentro das CORES CLARAS
+! color1  -> Git status "modified", Limite barra de progresso htop, EMPTY ranger
+! color2  -> Cor MENU e barra progresso htop - Layout e texto musicas mocp 
+! color3  -> Cor imagens ranger, cor do estado do git
+! color4  -> Meio da barra de progresso htop
+! color5  -> Musicas e permissoẽs de arquivos ranger(drwx-xr-x)
+! color6  -> cor do texto diretório (/w)
+! color7  -> Cor do tipo de usuário($ ou #), bolinhas que o pacman come.
+! color8  -> Cor dos números htop 
 ! color10 -> cor de scripts executáveis e prompt bash
-! color11 -> cor de caracteres especias e pacman(-Syu)
+! color11 -> Cor do pacman e seleção ranger
 ! color12 -> cor das pastas(ls)
-! 
-! TEMA_CINZA
-! URxvt*color0:#000000
-! URxvt*color1:
-! URxvt*color2:#123456
-! URxvt*color3:#2B2C2B
-! URxvt*color4:#454948
-! URxvt*color5:
-! URxvt*color6:#7AADDC
-! URxvt*color7:#1A6B9E
-! URxvt*color8:#2D2D2D
-! URxvt*color9:
-! URxvt*color10:#70C300
-URxvt*color11:#EBB107
-! URxvt*color12:#1A6B9E
-! URxvt*color13:
-! URxvt*color14:
-! URxvt*color15:
-! URxvt*colorBD:
-! URxvt*colorIT:
-! URxvt*colorUL:
-! URxvt*colorRV:
-! URxvt*underlineColor:
-! URxvt*scrollColor:
-! URxvt*troughColor:
-! URxvt*highlightColor:
-! URxvt*highlightTextColor:
-! URxvt*cursorColor:#A97DD4
-! URxvt*cursorColor2:#2D1C3F
-! URxvt*pointerColor:#A663ED
-! URxvt*pointerColor2:#2D1C3F
-! URxvt*borderColor:#000000
-!
-! -----------------------------------------------
-!
-! TEMA_AZUL
-! URxvt*color0:#000000
-! URxvt*color1:
-! URxvt*color2:
-! URxvt*color3:#073385
-! URxvt*color4:#1A6B9E
-! URxvt*color5:
-! URxvt*color6:#5BB3E3
-! URxvt*color7:#0084FF
-! URxvt*color8:
-! URxvt*color9:
-! URxvt*color10:#70C300
-! URxvt*color11:#EBB107
-! URxvt*color12:#0F28A8
-! URxvt*color13:
-! URxvt*color14:
-! URxvt*color15:
-! URxvt*colorBD:
-! URxvt*colorIT:
-! URxvt*colorUL:
-! URxvt*colorRV:
-! URxvt*underlineColor:
-! URxvt*scrollColor:
-! URxvt*troughColor:
-! URxvt*highlightColor:
-! URxvt*highlightTextColor:
-! URxvt*cursorColor: #063380
-! URxvt*cursorColor2:#121212
-! URxvt*pointerColor:
-! URxvt*pointerColor2:
-! URxvt*borderColor:#000000
-!
-! -----------------------------------------------
-!
-! TEMA_ROXO
-! URxvt*color0:#989898
-! URxvt*color1:
-! URxvt*color2:
-! URxvt*color3:#4E0966
-! URxvt*color4:#671FB2
-! URxvt*color5:
-! URxvt*color6:#9A56DF
-! URxvt*color7:#5C037B
-! URxvt*color8:#8D1FB2
-! URxvt*color9:
-! URxvt*color10:#70C300
-! URxvt*color11:#EBB107
-! URxvt*color12:#0F28A8
-! URxvt*color13:
-! URxvt*color14:
-! URxvt*color15:
-! URxvt*colorBD:
-! URxvt*colorIT:
-! URxvt*colorUL:
-! URxvt*colorRV:
-! URxvt*underlineColor:
-! URxvt*scrollColor:
-! URxvt*troughColor:
-! URxvt*highlightColor:
-! URxvt*highlightTextColor:
-! URxvt*cursorColor: #FFFFFF
-! URxvt*cursorColor2:#121212
-! URxvt*pointerColor:
-! URxvt*pointerColor2:
-! URxvt*borderColor:#000000
-!
-!----------------------------------------------
+! color14 -> Cor dos links simbólicos. Numeros htop
+! color15 -> Numeros mocp, cor texto dentro das CORES ESCURAS
+! colorBD -> Mensagens TERMINAL, [ htop, Lista de pasta mocp 
+! foreground -> cor do Texto normal
+! background -> cor do fundo do terminal
+!-------------TEMA ROXO e AZUL--------------
+URxvt*color0:                   #000000
+URxvt*color1:                   #FB04C9
+URxvt*color2:                   #0000FF
+URxvt*color3:                   #FFFF00
+URxvt*color4:                   #3B114C
+URxvt*color5:                   #70C300
+URxvt*color6:                   #8B21Af
+URxvt*color7:                   #57009B
+URxvt*color8:                   #0C83CA
+!URxvt*color10:                  #70C300
+URxvt*color11:                  #EBB107
+!URxvt*color12:                  #1A6B9E
+URxvt*color14:                  #08BB29
+URxvt*color15:                  #FFFFFF
+URxvt*colorBD:                  #57009B
+!URxvt*colorIT:                  NA
+!URxvt*colorUL:                  NA
+!URxvt.colorRV:                  NA
+!URxvt*underlineColor:           NA
+!URxvt*scrollColor:              NA
+!URxvt*troughColor:              NA
+!URxvt*highlightColor:           NA
+!URxvt.highlightTextColor:       NA
+URxvt.cursorColor:              #D2D2D2
+!URxvt.cursorColor2:             NA
+!URxvt*pointerColor:             NA
+!URxvt*pointerColor2:            NA
+!URxvt*borderColor:              NA
+!URxvt.background:               #000000
+!URxvt.foreground:               #D2D2D2
+!-------------------------------------------
 !
 ! URxvt*iconFile:                  file
 ! URxvt*font:                      fontname
@@ -265,7 +198,7 @@ URxvt*internalBorder: 0
 ! URxvt*iso14755_52:               boolean
 ! URxvt*xrm:                       string
 ! URxvt*keysym.sym:                keysym
-URxvt*background.border:false
+! URxvt*background.border:false
 ! URxvt*background.expr:           string
 ! URxvt*background.interval:       seconds
 ! URxvt*bell-command:              string
