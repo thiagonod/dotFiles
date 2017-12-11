@@ -133,10 +133,16 @@ endif
 " ============================================================================
 " Vim settings and mappings
 " You can jdit them as you wish
-" Cursor highlight \c toggle
+" Cursor highlight \z toggle
 :hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 :hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
-:nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
+:nnoremap <Leader>z :set cursorline! cursorcolumn!<CR>
+
+" Carregar arquivo temporário(COALR)
+nnoremap <Leader>v :r ~/.temporario<CR>
+
+" Criar arquivo temporário(COPIAR)
+vnoremap <Leader>c :'<,'>w! ~/.temporario<CR>
 
 " Toggle mouse \m 
 nnoremap <Leader>m :set mouse=a<CR>
@@ -182,7 +188,7 @@ syntax on
 
 " show line numbers
 set nu
-" set rnu
+set rnu
 
 " tab navigation mappings
 map tn :tabn<CR>
@@ -208,7 +214,7 @@ imap <C-J> <ESC><c-w>j
 " Comment this line to enable autocompletion preview window
 " (displays documentation related to the selected completion option)
 " Disabled by default because preview makes the window flicker
-set completeopt-=preview
+" set completeopt-=preview
 
 " save as sudo
 ca w!! w !sudo tee "%"
@@ -436,8 +442,5 @@ syntax on
 colorscheme monokai
 
 " carregar na inicializacao
-":set mouse=a "ERESIA TOTAL 
-":set number
-":set relativenumber
 :set cursorline
 :set cursorcolumn
