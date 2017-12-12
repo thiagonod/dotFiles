@@ -138,11 +138,12 @@ endif
 :hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 :nnoremap <Leader>z :set cursorline! cursorcolumn!<CR>
 
-" Carregar arquivo temporário(COALR)
-nnoremap <Leader>v :r ~/.temporario<CR>
+" COPIAR e COLAR
+" Carregar arquivo temporário \v (COLAR, paste)
+nnoremap <Leader>v :r ~/.my_vim_clipboard<CR>
 
-" Criar arquivo temporário(COPIAR)
-vnoremap <Leader>c :'<,'>w! ~/.temporario<CR>
+" Criar arquivo temporário \c (COPIAR, copy selected)
+vnoremap <Leader>c y:new ~/.my_vim_clipboard<CR>VGp:x<CR>:!xclip -selection clipboard < ~/.my_vim_clipboard<CR><CR>
 
 " Toggle mouse \m 
 nnoremap <Leader>m :set mouse=a<CR>
@@ -214,7 +215,7 @@ imap <C-J> <ESC><c-w>j
 " Comment this line to enable autocompletion preview window
 " (displays documentation related to the selected completion option)
 " Disabled by default because preview makes the window flicker
-" set completeopt-=preview
+set completeopt-=preview
 
 " save as sudo
 ca w!! w !sudo tee "%"
