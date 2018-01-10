@@ -66,8 +66,7 @@ bindsym XF86AudioPrev exec mocp --previous
 
 # Start Applications
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
-#bindsym $mod+F1 exec terminal -e 'vim'
-#bindsym $mod+F1 exec --no-startup-id qutebrowser 
+bindsym $mod+Shift+F2 exec --no-startup-id qutebrowser 
 bindsym $mod+F2 exec firefox
 bindsym XF86HomePage exec firefox
 bindsym $mod+F3 exec terminal -e 'ranger'
@@ -78,11 +77,11 @@ bindsym $mod+F6 exec inkscape
 bindsym $mod+F7 exec terminal -e 'mocp'
 bindsym $mod+t exec --no-startup-id pkill compton
 bindsym $mod+Ctrl+t exec --no-startup-id compton -b
-bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
+bindsym $mod+Ctrl+d --release exec "killall dunst; exec notify-send 'restart dunst'"
 bindsym Print exec --no-startup-id i3-scrot
 bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
 bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
-bindsym $mod+ShiftShift+F1 exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
+bindsym $mod+Shift+F1 exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
 bindsym $mod+F1 exec mousepad /home/thiago/Documentos/giropops.txt
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 
