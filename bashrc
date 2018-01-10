@@ -1,6 +1,7 @@
 #
 # ~/.bashrc
 #
+set -o vi
 [[ $- != *i* ]] && return
 
 colors() {
