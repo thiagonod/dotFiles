@@ -1,7 +1,7 @@
 clear mod1
 clear mod4
-keycode 18 = parenleft 9 parenleft 9 bracketright plusminus bracketright plusminus parenleft 9 bracketright plusminus
-keycode 19 = parenright 0 parenright 0 braceright degree braceright degree parenright 0 braceright degree
+!keycode 18 = parenleft 9 parenleft 9 bracketright plusminus bracketright plusminus parenleft 9 bracketright plusminus
+!keycode 19 = parenright 0 parenright 0 braceright degree braceright degree parenright 0 braceright degree
 keycode 61 = colon semicolon colon semicolon dead_belowdot dead_abovedot dead_belowdot
 keycode 64 = Super_L NoSymbol Super_L NoSymbol Super_L
 keycode 133 = Alt_L Meta_L Alt_L Meta_L Alt_L Meta_L
