@@ -84,6 +84,7 @@ bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
 bindsym $mod+Shift+F1 exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
 bindsym $mod+F1 exec mousepad /home/thiago/Documentos/giropops.txt
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
+bindsym $mod+Shift+x --release exec --no-startup-id "xrdb -load ~/.Xresources", exec notify-send "Xresources recarregado!"
 
 # focus_follows_mouse no
 
@@ -255,7 +256,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Você realmente quer sair do i3? Isso ira encerrar sua X session.' -b 'Sim, sair  do i3' 'i3-msg exit'"
 
 bindsym $mod+Ctrl+e exec "i3-msg exit"
 
@@ -316,7 +317,7 @@ exec --no-startup-id clipit
 #exec --no-startup-id blueman
 #exec_always --no-startup-id sbxkb
 #exec --no-startup-id start_conky_grey
-#exec --no-startup-id start_conky_maia
+exec --no-startup-id start_conky_maia
 #exec --no-startup-id start_conky_solarized
 #exec --no-startup-id start_conky_green
 exec --no-startup-id xautolock -time 10 -locker blurlock
