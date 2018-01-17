@@ -75,8 +75,8 @@ bindsym $mod+Shift+F4 exec gksu pcmanfm
 bindsym $mod+F5 exec gimp
 bindsym $mod+F6 exec inkscape
 bindsym $mod+F7 exec terminal -e 'mocp'
-bindsym $mod+t exec --no-startup-id pkill compton
-bindsym $mod+Ctrl+t exec --no-startup-id compton -b
+bindsym $mod+t exec --no-startup-id pkill compton, exec notify-send "Compton OFF"
+bindsym $mod+Ctrl+t exec --no-startup-id compton -b, exec notify-send "Compton ON"
 bindsym $mod+Ctrl+d --release exec "killall dunst; exec notify-send 'restart dunst'"
 bindsym Print exec --no-startup-id i3-scrot
 bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
