@@ -1,0 +1,4 @@
+#!/bin/bash
+#
+echo "Verificando ping de todos os mirrors..."
+sudo pacman-mirrors -i -c all
