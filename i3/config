@@ -66,15 +66,16 @@ bindsym XF86AudioPrev exec mocp --previous
 
 # Start Applications
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
-bindsym $mod+Shift+F2 exec --no-startup-id qutebrowser 
-bindsym $mod+F2 exec firefox
-bindsym XF86HomePage exec firefox
+bindsym $mod+F2 exec --no-startup-id qutebrowser 
+bindsym $mod+Shift+F2 exec firefox
+bindsym XF86HomePage exec --no-startup-id qutebrowser
 bindsym $mod+F3 exec terminal -e 'ranger'
 bindsym $mod+F4 exec pcmanfm
 bindsym $mod+Shift+F4 exec gksu pcmanfm
 bindsym $mod+F5 exec gimp
 bindsym $mod+F6 exec inkscape
 bindsym $mod+F7 exec terminal -e 'mocp'
+bindsym $mod+F8 --release exec --no-startup-id terminal -e 'vim'
 bindsym $mod+t exec --no-startup-id pkill compton, exec notify-send "Compton OFF"
 bindsym $mod+Ctrl+t exec --no-startup-id compton -b, exec notify-send "Compton ON"
 bindsym $mod+Ctrl+d --release exec "killall dunst; exec notify-send 'restart dunst'"
@@ -86,7 +87,8 @@ bindsym $mod+F1 exec mousepad /home/thiago/Documentos/giropops.txt
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 bindsym $mod+Shift+x --release exec --no-startup-id "xrdb -load ~/.Xresources", exec notify-send "Xresources recarregado!"
 
-# focus_follows_mouse no
+# Disable focus on mouse
+focus_follows_mouse no
 
 # change focus
 #bindsym $mod+j focus left
