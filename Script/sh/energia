@@ -19,7 +19,7 @@ erro () {
         ;;
         1)
             echo ''
-            echo 'ERRO 1 - O programa foi encerrado pelo usuário.' >&2
+            echo 'ERRO 1 - Programa encerrado. Necessário permissões de root.' >&2
             echo ''
             exit 1
         ;;
@@ -39,7 +39,7 @@ erro () {
 
 get_status () {
     echo 'Exibir modo de energia atual...'
-    sudo x86_energy_perf_policy #
+    x86_energy_perf_policy #
     if [ ! $? -ne 0 ]; then #verificar se o ultimo comando foi bem sucedido.
         echo ''
         echo '(EPB 4)=Balance-Performance mode | (EPB 15)=Power-save mode'
@@ -53,7 +53,7 @@ set_mode () {
     case "$1" in
         1)
             echo 'Ativar o modo de performance...'
-            sudo x86_energy_perf_policy balance-performance
+            x86_energy_perf_policy balance-performance
             if [ ! $? -ne 0 ]; then #verificar se o ultimo comando foi bem sucedido.
                 echo ''
                 echo 'Modo PERFORMANCE ativado com sucesso.'
@@ -64,7 +64,7 @@ set_mode () {
         ;;
         2)
             echo 'Ativar modo de economia de energia...'
-            sudo x86_energy_perf_policy power
+            x86_energy_perf_policy power
             if [ ! $? -ne 0 ]; then #verificar se o ultimo comando foi bem sucedido.
                 echo ''
                 echo 'Modo ECONOMIA DE ENERGIA ativado com sucesso.'
