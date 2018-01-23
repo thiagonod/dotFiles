@@ -409,7 +409,6 @@ set $i3_vermelho1       #E5201D
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
-	#i3bar_command i3bar -t #deixa transparente
 	status_command i3status
 	position top
 
@@ -424,17 +423,14 @@ bar {
 
 	colors {
         background $i3_preto
-        #background $i3_preto
         statusline $i3_text
-        #statusline $i3_text
         separator  $i3_separator
-        #separator  $i3_separator
 
-#                           border      backgr.      text
-        focused_workspace   $i3_azul2  $i3_cinza2  $i3_text
-        active_workspace    $i3_semi_branco  $i3_cinza2  $i3_semi_branco
-        inactive_workspace  $i3_cinza3  $i3_semi_preto  $i3_cinza4
-        urgent_workspace    $i3_color4  $i3_color5  $i3_color7
+#                           border              backgr.             text
+        focused_workspace   $i3_azul2           $i3_cinza2          $i3_text
+        active_workspace    $i3_semi_branco     $i3_cinza2          $i3_semi_branco
+        inactive_workspace  $i3_cinza3          $i3_semi_preto      $i3_cinza4
+        urgent_workspace    $i3_color4          $i3_color5          $i3_color7
     }
 }
 
@@ -442,17 +438,12 @@ bar {
 bindsym $mod+m bar mode toggle
 
 # Theme colors
-# class                 border      backgr.     text        indic.      child_border
-#client.focused          $i3_color8  $i3_color8  $i3_color11 $i3_color12
-#client.focused_inactive $i3_color9  $i3_color9  $i3_color4  $i3_color10
-#client.unfocused        $i3_color9  $i3_color9  $i3_color4  $i3_color10
-#client.urgent           $i3_color13 $i3_color12 $i3_color4  $i3_color14
-#client.placeholder      $i3_preto $i3_color17 $i3_color16 $i3_preto $i3_color17
-client.focused          $i3_azul5  $i3_azul2  $i3_semi_branco $i3_cinza3
-client.focused_inactive $i3_cinza1  $i3_preto  $i3_cinza3  $i3_cinza4
-client.unfocused        $i3_cinza1  $i3_preto  $i3_cinza3  $i3_cinza4
-client.urgent           $i3_laranja1 $i3_color12 $i3_color4  $i3_azul3
-client.placeholder      $i3_preto $i3_semi_preto $i3_color16 $i3_preto $i3_semi_preto
+# class                 border          backgr.         text            indic.          child_border
+client.focused          $i3_azul5       $i3_azul2       $i3_semi_branco $i3_cinza3
+client.focused_inactive $i3_cinza1      $i3_preto       $i3_cinza3      $i3_cinza4
+client.unfocused        $i3_cinza1      $i3_preto       $i3_cinza3      $i3_cinza4
+client.urgent           $i3_laranja1    $i3_color12     $i3_color4      $i3_azul3
+client.placeholder      $i3_preto       $i3_semi_preto  $i3_color16     $i3_preto       $i3_semi_preto
 
 client.background       $i3_preto
 
