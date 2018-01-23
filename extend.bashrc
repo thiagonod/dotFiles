@@ -111,7 +111,7 @@ ex ()
 export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1;41;5:votes=1;44:dsc=0:other=1;35"
 
 # fix "xdg-open fork-bomb" export your preferred browser from here
-export BROWSER=/usr/bin/firefox
+export BROWSER=/usr/bin/qutebrowser
 
 alias mkin='mkin () { if [ -d $1 ] || [ -z $1 ]; then echo "O diretório $1 já existe, ou parâmetro inválido."; else mkdir $1; cd $1; fi } ; mkin'
 alias ..='cd ..'
@@ -123,3 +123,16 @@ alias ls='ls --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=au
 alias la='ls -la --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
 alias ll='ls -l --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
 alias printer='system-config-printer'
+
+# git aliases
+alias gtl='git pull'
+alias gtp='git push'
+alias gtpom='git push origin master'
+alias gtd='git diff'
+alias gtcm='git commit -m'
+alias gtca='git commit -a'
+alias gtco='git checkout'
+alias gtb='git branch'
+alias gts='git status'
+alias gtad='git add'
+alias gtrm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
