@@ -34,9 +34,10 @@ bindsym $mod+Return exec terminal
 bindsym $mod+Shift+q kill
 
 # start program launcher
-bindsym $mod+Shift+d exec --no-startup-id dmenu_recency
-bindsym $mod+d exec --no-startup-id rofi -modi drun -show drun
-bindsym $mod+Tab exec --no-startup-id rofi -modi window -show window
+bindsym $mod+d exec --no-startup-id dmenu_recency
+# needs rofi (pacman -S rofi)
+#bindsym $mod+d exec --no-startup-id rofi -modi drun -show drun
+#bindsym $mod+Tab exec --no-startup-id rofi -modi window -show window
 
 # launch categorized menu
 bindsym $mod+z exec --no-startup-id morc_menu
