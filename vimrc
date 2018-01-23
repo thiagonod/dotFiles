@@ -189,7 +189,7 @@ syntax on
 
 " show line numbers
 set nu
-set rnu
+"set rnu
 
 " tab navigation mappings
 map tn :tabn<CR>
