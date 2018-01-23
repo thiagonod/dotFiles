@@ -125,7 +125,8 @@ alias ll='ls -l --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color
 alias printer='system-config-printer'
 
 # git aliases
-alias gtl='git pull'
+alias gtl='git log'
+alias gtll='git pull'
 alias gtp='git push'
 alias gtpom='git push origin master'
 alias gtd='git diff'
