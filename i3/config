@@ -311,7 +311,7 @@ bindsym $mod+Shift+0 exec --no-startup-id xautolock -disable, exec notify-send -
 
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id nitrogen --restore; sleep 1; compton -b
+exec --no-startup-id nitrogen --restore; sleep 1; compton -f -b
 #exec --no-startup-id manjaro-hello
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
@@ -415,11 +415,12 @@ bar {
 ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
 #	tray_output primary
 #	tray_output eDP1
-	
+    separator_symbol "|" 	
 	bindsym button4 nop
 	bindsym button5 nop
 	font xft:Ubuntu Mono derivative Powerline 10
-	strip_workspace_numbers yes
+    workspace_buttons yes
+	strip_workspace_numbers no  
 
 	colors {
         background $i3_preto
