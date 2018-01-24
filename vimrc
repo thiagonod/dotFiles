@@ -171,10 +171,10 @@ set cursorline
 set cursorcolumn
 
 " Enable show commands in status line
-set showcmd
+:set showcmd
 
 " syntax highlight on
-syntax on
+:syntax on
 
 " show line numbers and relative numbers
 set nu
@@ -496,3 +496,7 @@ let g:airline_symbols.maxlinenr = ''
 "let g:airline_symbols.branch = '⭠'
 "let g:airline_symbols.readonly = '⭤'
 "let g:airline_symbols.linenr = '⭡'
+
+" Mostrar ou não(!), comandos na status line
+set showcmd
+set showmode!
