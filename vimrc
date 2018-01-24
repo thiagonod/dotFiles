@@ -32,75 +32,100 @@ endif
 call plug#begin('~/.vim/plugged')
 
 " Plugins from github repos:
-
 " Override configs by directory 
-Plug 'arielrossanigo/dir-configs-override.vim'
+"Plug 'arielrossanigo/dir-configs-override.vim'
+
 " Better file browser
 Plug 'scrooloose/nerdtree'
+
 " Code commenter
 Plug 'scrooloose/nerdcommenter'
+
 " Class/module browser
 Plug 'majutsushi/tagbar'
+
 " Code and files fuzzy finder
 Plug 'ctrlpvim/ctrlp.vim'
+
 " Extension to ctrlp, for fuzzy command finder
 Plug 'fisadev/vim-ctrlp-cmdpalette'
+
 " Zen coding
 Plug 'mattn/emmet-vim'
+
 " Git integration
 Plug 'motemen/git-vim'
+
 " Tab list panel
 Plug 'kien/tabman.vim'
+
 " Airline
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-" Terminal Vim with 256 colors colorscheme
-Plug 'fisadev/fisa-vim-colorscheme'
+"Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline-themes'
+
 " Consoles as buffers
 Plug 'rosenfeld/conque-term'
+
 " Pending tasks list
-Plug 'fisadev/FixedTaskList.vim'
+"Plug 'fisadev/FixedTaskList.vim'
+
 " Surround
 Plug 'tpope/vim-surround'
+
 " Autoclose
 Plug 'Townk/vim-autoclose'
+
 " Indent text object
 Plug 'michaeljsmith/vim-indent-object'
+
 " Indentation based movements
 Plug 'jeetsukumaran/vim-indentwise'
+
 " Python autocompletion, go to definition.
 Plug 'davidhalter/jedi-vim'
+
 " Better autocompletion
 Plug 'Shougo/neocomplcache.vim'
+
 " Snippets manager (SnipMate), dependencies, and snippets repo
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'honza/vim-snippets'
 Plug 'garbas/vim-snipmate'
+
 " Git/mercurial/others diff icons on the side of the file lines
 Plug 'mhinz/vim-signify'
+
 " Automatically sort python imports
 Plug 'fisadev/vim-isort'
+
 " Drag visual blocks arround
 Plug 'fisadev/dragvisuals.vim'
+
 " Window chooser
 Plug 't9md/vim-choosewin'
+
 " Python and other languages code checker
 Plug 'scrooloose/syntastic'
+
 " Monokai themes
 Plug 'crusoexia/vim-monokai'
 Plug 'reewr/vim-monokai-phoenix'
+
 " Outros temas
 " Enable Folding plug
 Plug 'tmhedberg/SimpylFold'
+
 " Paint css colors with the real color
 Plug 'lilydjwg/colorizer'
+
 " Ack code search (requires ack installed in the system)
 Plug 'mileszs/ack.vim'
 if has('python')
     " YAPF formatter for Python
     Plug 'pignacio/vim-yapf-format'
 endif
+
 " Relative numbering of lines (0 is the current line)
 " (disabled by default because is very intrusive and can't be easily toggled
 " on/off. When the plugin is present, will always activate the relative 
@@ -109,13 +134,15 @@ endif
 " Plug 'myusuf3/numbers.vim'
 
 " Plugins from vim-scripts repos:
-
 " Search results counter
 Plug 'vim-scripts/IndexedSearch'
+
 " XML/HTML tags navigation
 Plug 'vim-scripts/matchit.zip'
+
 " Gvim colorscheme
 Plug 'vim-scripts/Wombat'
+
 " Yank history navigation
 Plug 'vim-scripts/YankRing.vim'
 
@@ -131,12 +158,20 @@ if vim_plug_just_installed
 endif
 
 " ============================================================================
+"
 " Vim settings and mappings
-" You can jdit them as you wish
+" 
 " Cursor highlight \z toggle
 :hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 :hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 :nnoremap <Leader>z :set cursorline! cursorcolumn!<CR>
+
+" Enable cursor highlight on Vim initialization
+:set cursorline
+:set cursorcolumn
+
+" CORES
+colorscheme monokai
 
 " COPIAR e COLAR
 " Carregar arquivo temporário \v (COLAR, paste)
@@ -177,7 +212,7 @@ autocmd FileType htmldjango setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
 " always show status bar
-set ls=2
+"set ls=2
 
 " incremental search
 set incsearch
@@ -215,7 +250,7 @@ imap <C-J> <ESC><c-w>j
 " Comment this line to enable autocompletion preview window
 " (displays documentation related to the selected completion option)
 " Disabled by default because preview makes the window flicker
-set completeopt-=preview
+"set completeopt-=preview
 
 " save as sudo
 ca w!! w !sudo tee "%"
@@ -226,9 +261,6 @@ nmap ,wr :Ack <cword><CR>
 
 " use 256 colors when possible
 if (&term =~? 'mlterm\|xterm\|xterm-256\|screen-256') || has('nvim')
-	let &t_Co = 256
-    colorscheme fisa
-else
     colorscheme delek
 endif
 
@@ -269,30 +301,26 @@ endif
 " Plugins settings and mappings
 " Edit them as you wish.
 
-" Tagbar ----------------------------- 
-
+" Tagbar ------------------------------------------------------------------
 " toggle tagbar display
 map <F4> :TagbarToggle<CR>
 " autofocus on tagbar open
 let g:tagbar_autofocus = 1
 
-" NERDTree ----------------------------- 
-
+" NERDTree ----------------------------------------------------------------
 " toggle nerdtree display
 map <F3> :NERDTreeToggle<CR>
 " open nerdtree with the current file selected
-nmap ,t :NERDTreeFind<CR>
+nmap <F2> :NERDTreeFind<CR>
 " don;t show these file types
 let NERDTreeIgnore = ['\.pyc$', '\.pyo$']
 
 
-" Tasklist ------------------------------
-
+" Tasklist ----------------------------------------------------------------
 " show pending tasks list
-map <F2> :TaskList<CR>
+"map <F2> :TaskList<CR>
 
-" CtrlP ------------------------------
-
+" CtrlP -------------------------------------------------------------------
 " file finder mapping
 let g:ctrlp_map = ',e'
 " tags (symbols) in current file finder mapping
@@ -326,8 +354,7 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\.pyc$\|\.pyo$',
   \ }
 
-" Syntastic ------------------------------
-
+" Syntastic ---------------------------------------------------------------
 " show list of errors and warnings on the current file
 nmap <leader>e :Errors<CR>
 " check also when just opened the file
@@ -341,8 +368,7 @@ let g:syntastic_warning_symbol = '⚠'
 let g:syntastic_style_error_symbol = '✗'
 let g:syntastic_style_warning_symbol = '⚠'
 
-" Jedi-vim ------------------------------
-
+" Jedi-vim ----------------------------------------------------------------
 " All these mappings work only for python code:
 " Go to definition
 let g:jedi#goto_command = ',d'
@@ -353,8 +379,7 @@ let g:jedi#goto_assignments_command = ',a'
 " Go to definition in new tab
 nmap ,D :tab split<CR>:call jedi#goto()<CR>
 
-" NeoComplCache ------------------------------
-
+" NeoComplCache -----------------------------------------------------------
 " most of them not documented because I'm not sure how they work
 " (docs aren't good, had to do a lot of trial and error to make 
 " it play nice)
@@ -374,19 +399,16 @@ let g:neocomplcache_min_syntax_length = 1
 let g:neocomplcache_same_filetype_lists = {}
 let g:neocomplcache_same_filetype_lists._ = '_'
 
-" TabMan ------------------------------
-
+" TabMan ------------------------------------------------------------------
 " mappings to toggle display, and to focus on it
 let g:tabman_toggle = 'tl'
 let g:tabman_focus  = 'tf'
 
-" Autoclose ------------------------------
-
+" Autoclose ---------------------------------------------------------------
 " Fix to let ESC work as espected with Autoclose plugin
 let g:AutoClosePumvisible = {"ENTER": "\<C-Y>", "ESC": "\<ESC>"}
 
-" DragVisuals ------------------------------
-
+" DragVisuals -------------------------------------------------------------
 " mappings to move blocks in 4 directions
 vmap <expr> <S-LEFT> DVB_Drag('left')
 vmap <expr> <S-RIGHT> DVB_Drag('right')
@@ -395,8 +417,7 @@ vmap <expr> <S-UP> DVB_Drag('up')
 " mapping to duplicate block
 vmap <expr> D DVB_Duplicate()
 
-" Signify ------------------------------
-
+" Signify -----------------------------------------------------------------
 " this first setting decides in which order try to guess your current vcs
 " UPDATE it to reflect your preferences, it will speed up opening files
 let g:signify_vcs_list = [ 'git', 'hg' ]
@@ -411,28 +432,27 @@ highlight SignifySignAdd    cterm=bold ctermbg=237  ctermfg=119
 highlight SignifySignDelete cterm=bold ctermbg=237  ctermfg=167
 highlight SignifySignChange cterm=bold ctermbg=237  ctermfg=227
 
-" Window Chooser ------------------------------
-
+" Window Chooser ----------------------------------------------------------
 " mapping
 nmap  -  <Plug>(choosewin)
 " show big letters
 let g:choosewin_overlay_enable = 1
 
-" Airline ------------------------------
-let g:airline_powerline_fonts = 1
-let g:airline_symbolraven = 1
-let g:airline_theme = 'raven'
+" Airline -----------------------------------------------------------------
+"let g:airline_powerline_fonts = 1
+"let g:airline_symbolraven = 1
+"let g:airline_theme = 'raven'
 
 " Extensions
-let g:airline#extensions#whitespace#enabled = 0 
-let g:airline#extensions#hunks#enabled = 1 
-let g:airline#extensions#branch#enabled = 1
+"let g:airline#extensions#whitespace#enabled = 0 
+"let g:airline#extensions#hunks#enabled = 1 
+"let g:airline#extensions#branch#enabled = 1
 
 " to use fancy symbols for airline, uncomment the following lines and use a
 " patched font (more info on the README.rst)
-if !exists('g:airline_symbols')
-   let g:airline_symbols = {}
-endif
+"if !exists('g:airline_symbols')
+"   let g:airline_symbols = {}
+"endif
 
 " unicode symbols
 "let g:airline_left_sep = '»'
@@ -443,7 +463,7 @@ endif
 "let g:airline_symbols.linenr = '☰'
 "let g:airline_symbols.linenr = '␊'
 "let g:airline_symbols.linenr = '␤'
-let g:airline_symbols.linenr = '¶'
+"let g:airline_symbols.linenr = '¶'
 "let g:airline_symbols.maxlinenr = ''
 "let g:airline_symbols.maxlinenr = '㏑'
 "let g:airline_symbols.branch = '⎇'
@@ -455,14 +475,14 @@ let g:airline_symbols.linenr = '¶'
 "let g:airline_symbols.whitespace = 'Ξ'
 
 " powerline symbols
-let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
-let g:airline_symbols.branch = ''
-let g:airline_symbols.readonly = ''
+"let g:airline_left_sep = ''
+"let g:airline_left_alt_sep = ''
+"let g:airline_right_sep = ''
+"let g:airline_right_alt_sep = ''
+"let g:airline_symbols.branch = ''
+"let g:airline_symbols.readonly = ''
 "let g:airline_symbols.linenr = '☰'
-let g:airline_symbols.maxlinenr = ''
+"let g:airline_symbols.maxlinenr = ''
 
 " Old vim-pwerline symbols
 "let g:airline_left_sep = '⮀'
@@ -473,11 +493,4 @@ let g:airline_symbols.maxlinenr = ''
 "let g:airline_symbols.readonly = '⭤'
 "let g:airline_symbols.linenr = '⭡'
 
-"=========================MINHAS CONFS==============================
-" temas 
-syntax on
-colorscheme monokai
 
-" carregar na inicializacao
-:set cursorline
-:set cursorcolumn
