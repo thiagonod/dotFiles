@@ -48,7 +48,7 @@ Plug 'majutsushi/tagbar'
 Plug 'ctrlpvim/ctrlp.vim'
 
 " Extension to ctrlp, for fuzzy command finder
-Plug 'fisadev/vim-ctrlp-cmdpalette'
+"Plug 'fisadev/vim-ctrlp-cmdpalette'
 
 " Zen coding
 Plug 'mattn/emmet-vim'
@@ -60,8 +60,8 @@ Plug 'motemen/git-vim'
 Plug 'kien/tabman.vim'
 
 " Airline
-"Plug 'vim-airline/vim-airline'
-"Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " Consoles as buffers
 Plug 'rosenfeld/conque-term'
@@ -167,10 +167,23 @@ endif
 :nnoremap <Leader>z :set cursorline! cursorcolumn!<CR>
 
 " Enable cursor highlight on Vim initialization
-:set cursorline
-:set cursorcolumn
+set cursorline
+set cursorcolumn
 
-" CORES
+" Enable show commands in status line
+set showcmd
+
+" syntax highlight on
+syntax on
+
+" show line numbers and relative numbers
+set nu
+"set rnu
+
+" always show status bar
+set ls=2
+
+" CORES - Themes
 colorscheme monokai
 
 " COPIAR e COLAR
@@ -211,20 +224,11 @@ autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType htmldjango setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
-" always show status bar
-"set ls=2
-
 " incremental search
 set incsearch
+
 " highlighted search results
 set hlsearch
-
-" syntax highlight on
-syntax on
-
-" show line numbers
-set nu
-"set rnu
 
 " tab navigation mappings
 map tn :tabn<CR>
@@ -439,20 +443,20 @@ nmap  -  <Plug>(choosewin)
 let g:choosewin_overlay_enable = 1
 
 " Airline -----------------------------------------------------------------
-"let g:airline_powerline_fonts = 1
-"let g:airline_symbolraven = 1
-"let g:airline_theme = 'raven'
+let g:airline_powerline_fonts = 1
+let g:airline_symbolraven = 1
+let g:airline_theme = 'raven'
 
 " Extensions
-"let g:airline#extensions#whitespace#enabled = 0 
-"let g:airline#extensions#hunks#enabled = 1 
-"let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#whitespace#enabled = 0 
+let g:airline#extensions#hunks#enabled = 1 
+let g:airline#extensions#branch#enabled = 1
 
 " to use fancy symbols for airline, uncomment the following lines and use a
 " patched font (more info on the README.rst)
-"if !exists('g:airline_symbols')
-"   let g:airline_symbols = {}
-"endif
+if !exists('g:airline_symbols')
+   let g:airline_symbols = {}
+endif
 
 " unicode symbols
 "let g:airline_left_sep = '»'
@@ -463,7 +467,7 @@ let g:choosewin_overlay_enable = 1
 "let g:airline_symbols.linenr = '☰'
 "let g:airline_symbols.linenr = '␊'
 "let g:airline_symbols.linenr = '␤'
-"let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.linenr = '¶'
 "let g:airline_symbols.maxlinenr = ''
 "let g:airline_symbols.maxlinenr = '㏑'
 "let g:airline_symbols.branch = '⎇'
@@ -475,14 +479,14 @@ let g:choosewin_overlay_enable = 1
 "let g:airline_symbols.whitespace = 'Ξ'
 
 " powerline symbols
-"let g:airline_left_sep = ''
-"let g:airline_left_alt_sep = ''
-"let g:airline_right_sep = ''
-"let g:airline_right_alt_sep = ''
-"let g:airline_symbols.branch = ''
-"let g:airline_symbols.readonly = ''
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
 "let g:airline_symbols.linenr = '☰'
-"let g:airline_symbols.maxlinenr = ''
+let g:airline_symbols.maxlinenr = ''
 
 " Old vim-pwerline symbols
 "let g:airline_left_sep = '⮀'
@@ -492,5 +496,3 @@ let g:choosewin_overlay_enable = 1
 "let g:airline_symbols.branch = '⭠'
 "let g:airline_symbols.readonly = '⭤'
 "let g:airline_symbols.linenr = '⭡'
-
-
