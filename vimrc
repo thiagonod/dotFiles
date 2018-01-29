@@ -228,6 +228,7 @@ autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2
 set incsearch
 
 " highlighted search results
+:nnoremap <Leader>f :set hlsearch!<CR>
 set hlsearch
 
 " tab navigation mappings
@@ -414,12 +415,12 @@ let g:AutoClosePumvisible = {"ENTER": "\<C-Y>", "ESC": "\<ESC>"}
 
 " DragVisuals -------------------------------------------------------------
 " mappings to move blocks in 4 directions
-vmap <C-h> DVB_Drag('left')
-vmap <C-l> DVB_Drag('right')
-vmap <C-j> DVB_Drag('down')
-vmap <C-k> DVB_Drag('up')
+vmap  <expr>  <C-h>  DVB_Drag('left')
+vmap  <expr>  <C-l>  DVB_Drag('right')
+vmap  <expr>  <C-j>  DVB_Drag('down')
+vmap  <expr>  <C-k>  DVB_Drag('up') 
 " mapping to duplicate block
-vmap <expr> D DVB_Duplicate()
+vmap  <expr>  D      DVB_Duplicate()
 
 " Signify -----------------------------------------------------------------
 " this first setting decides in which order try to guess your current vcs
