@@ -414,10 +414,10 @@ let g:AutoClosePumvisible = {"ENTER": "\<C-Y>", "ESC": "\<ESC>"}
 
 " DragVisuals -------------------------------------------------------------
 " mappings to move blocks in 4 directions
-vmap <expr> <S-LEFT> DVB_Drag('left')
-vmap <expr> <S-RIGHT> DVB_Drag('right')
-vmap <expr> <S-DOWN> DVB_Drag('down')
-vmap <expr> <S-UP> DVB_Drag('up')
+vmap <C-h> DVB_Drag('left')
+vmap <C-l> DVB_Drag('right')
+vmap <C-j> DVB_Drag('down')
+vmap <C-k> DVB_Drag('up')
 " mapping to duplicate block
 vmap <expr> D DVB_Duplicate()
 

@@ -139,3 +139,6 @@ alias gts='git status'
 alias gtad='git add'
 alias gtrm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 
+#source ~/.prompt_maker/modules/colors
+#source ~/.prompt_maker/modules/git
+#source ~/.prompt_maker/prompt
