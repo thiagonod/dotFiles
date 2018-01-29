@@ -420,7 +420,7 @@ vmap  <expr>  <C-l>  DVB_Drag('right')
 vmap  <expr>  <C-j>  DVB_Drag('down')
 vmap  <expr>  <C-k>  DVB_Drag('up') 
 " mapping to duplicate block
-vmap  <expr>  D      DVB_Duplicate()
+vmap  <expr>   D     DVB_Duplicate()
 
 " Signify -----------------------------------------------------------------
 " this first setting decides in which order try to guess your current vcs
@@ -501,3 +501,20 @@ let g:airline_symbols.maxlinenr = ''
 " Mostrar ou não(!), comandos na status line
 set showcmd
 set showmode!
+
+" No arrow keys for you!
+noremap <Up> :echo "SEM SETAS! HAHAHA... use o w animal!"<CR>
+noremap <Down> :echo "SEM SETAS! HAHAHA... use o j animal!"<CR>
+noremap <Left> :echo "SEM SETAS! HAHAHA... use o h animal!"<CR>
+noremap <Right> :echo "SEM SETAS! HAHAHA... use o l animal!"<CR>
+
+vnoremap <Up> :<C-u>echo "SEM SETAS! HAHAHA... use o l animal!"<CR>
+vnoremap <Down> :<C-u>echo "SEM SETAS! HAHAHA... use o j animal!"<CR>
+vnoremap <Left> :<C-u>echo "SEM SETAS! HAHAHA... use o h animal!"<CR>
+vnoremap <Right> :<C-u>echo "SEM SETAS! HAHAHA... use o l animal!"<CR>
+
+inoremap <Up> <C-o>:echo "SEM SETAS! HAHAHA... use o l animal!"<CR>
+inoremap <Down> <C-o>:echo "SEM SETAS! HAHAHA... use o j animal!"<CR>
+inoremap <Left> <C-o>:echo "SEM SETAS! HAHAHA... use o h animal!"<CR>
+inoremap <Right> <C-o>:echo "SEM SETAS! HAHAHA... use o l animal!"<CR>
+
