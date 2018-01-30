@@ -186,6 +186,9 @@ set ls=2
 " CORES - Themes
 colorscheme monokai
 
+" bind leader+i to search for a matching python import
+nnoremap <leader>i :!ag --nogroup --nocolor "^(from\|import).*\b<C-R><C-W>\b" \|awk -F: '{print $3}' \|sed 's/^[ ]*//g' \|head --lines 20 \|sort \|uniq <CR>
+
 " COPIAR e COLAR
 " Carregar arquivo temporário \v (COLAR, paste)
 nnoremap <Leader>v :r ~/.my_vim_clipboard<CR>
