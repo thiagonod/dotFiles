@@ -41,7 +41,7 @@ if ${use_color} ; then
         # ROOT
 		PS1='\[\033[01;33m\][\[\033[01;31m\]\$\[\033[01;33m\]]\h\[\033[0;37m\] \w\[\033[01;33m\]]›\[\033[00m\]'
 	else
-		PS1='\[\033[01;32m\][\[\033[0;37m\]\$\[\033[01;32m\]]\h\[\033[0;36m\] \w\[\033[01;32m\]]›\[\033[00m\]'
+        PS1="\[$(tput bold)\]\[$(tput setaf 1)\][\[$(tput setaf 3)\]\u\[$(tput setaf 2)\]@\[$(tput setaf 4)\]\h \[$(tput setaf 5)\]\W\[$(tput setaf 1)\]]\[$(tput setaf 7)\]\\$ \[$(tput sgr0)\]"
 	fi
 
 	alias ls='ls --color=auto'
@@ -138,7 +138,3 @@ alias gtb='git branch'
 alias gts='git status'
 alias gtad='git add'
 alias gtrm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
-
-#source ~/.prompt_maker/modules/colors
-#source ~/.prompt_maker/modules/git
-#source ~/.prompt_maker/prompt

@@ -178,7 +178,7 @@ set cursorcolumn
 
 " show line numbers and relative numbers
 set nu
-"set rnu
+set rnu
 
 " always show status bar
 set ls=2
@@ -447,11 +447,17 @@ let g:choosewin_overlay_enable = 1
 let g:airline_powerline_fonts = 1
 let g:airline_symbolraven = 1
 let g:airline_theme = 'raven'
+let g:airline_detect_modified = 1
+let g:airline_detect_spell = 1
+let g:airline_detect_spelllang = 1
 
 " Extensions
-let g:airline#extensions#whitespace#enabled = 0 
+let g:airline#extensions#whitespace#enabled = 1
 let g:airline#extensions#hunks#enabled = 1 
 let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tagbar#enabled = 1
+let g:airline#extensions#syntastic#enabled = 1
 
 " to use fancy symbols for airline, uncomment the following lines and use a
 " patched font (more info on the README.rst)
