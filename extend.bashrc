@@ -41,7 +41,7 @@ if ${use_color} ; then
         # ROOT
 		PS1='\[\033[01;33m\][\[\033[01;31m\]\$\[\033[01;33m\]]\h\[\033[0;37m\] \w\[\033[01;33m\]]›\[\033[00m\]'
 	else
-        PS1="\[$(tput bold)\]\[$(tput setaf 1)\][\[$(tput setaf 3)\]\u\[$(tput setaf 2)\]@\[$(tput setaf 4)\]\h \[$(tput setaf 5)\]\W\[$(tput setaf 1)\]]\[$(tput setaf 7)\]\\$ \[$(tput sgr0)\]"
+        PS1=" \[$(tput bold)\]\[\033[38;5;160m\][\[\033[38;5;226m\]\u\[\033[38;5;82m\]@\[\033[38;5;33m\]\h \[\033[38;5;177m\]\W\[\033[38;5;160m\]]\[\033[38;5;255m\]\\$ \[$(tput sgr0)\]"
 	fi
 
 	alias ls='ls --color=auto'
@@ -86,7 +86,7 @@ shopt -s histappend
 #
 # # ex - archive extractor
 # # usage: ex <file>
-ex ()
+function ex ()
 {
   if [ -f $1 ] ; then
     case $1 in
@@ -107,6 +107,16 @@ ex ()
     echo "'$1' is not a valid file"
   fi
 }
+# Essa função cria um diretório e logo depois entra nesse mesmo diretório.
+function mkin () 
+{
+    if [ -d $1 ] || [ -z $1 ]; then
+        echo "O diretório $1 já existe ou não é um parâmetro válido." 
+    else
+        mkdir $1;
+        cd $1;
+    fi
+}
 
 # better yaourt colors
 export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1;41;5:votes=1;44:dsc=0:other=1;35"
@@ -114,7 +124,6 @@ export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1
 # fix "xdg-open fork-bomb" export your preferred browser from here
 export BROWSER=/usr/bin/qutebrowser
 
-alias mkin='mkin () { if [ -d $1 ] || [ -z $1 ]; then echo "O diretório $1 já existe, ou parâmetro inválido."; else mkdir $1; cd $1; fi } ; mkin'
 alias ..='cd ..'
 alias con='vim $HOME/.i3/config'
 alias comp='vim $HOME/.config/compton.conf'

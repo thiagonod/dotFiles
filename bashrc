@@ -35,3 +35,4 @@ colors() {
 
 [ -r /usr/share/bash-completion/bash_completion   ] && . /usr/share/bash-completion/bash_completion
 screenfetch
+[[ -f ~/.prompt_maker/pmrc ]] && . ~/.prompt_maker/pmrc
